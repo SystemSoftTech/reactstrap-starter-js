@@ -1,0 +1,19 @@
+// Toasts
+.toast {
+  // position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 99;
+  &.show {
+    z-index: 1030;
+  }
+  .btn-close:focus {
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 420.98px) {
+  .toast {
+    width: auto;
+  }
+}
