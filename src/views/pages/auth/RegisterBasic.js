@@ -18,6 +18,9 @@ import "@styles/react/pages/page-authentication.scss"
 // ** Validations
 import { registerValidations } from "./schemas/validations"
 
+// Images
+import templetop from "assets/images/pages/temple-top.svg"
+
 const defaultValues = {
   email: "",
   terms: false,
@@ -37,25 +40,28 @@ const RegisterBasic = () => {
   }
 
   return (
-    <div className="auth-wrapper auth-basic px-2">
+    <div className="auth-wrapper auth-basic px-2" style={{background: "linear-gradient(180deg, #7D1717 0%, #F48037 100%)"}}>
       <div className="auth-inner my-2">
-        <Card className="mb-0">
+      <div className="text-center">
+        <img src={templetop} width="80%" style={{position:"relative", bottom:"-1px"}} />
+        </div>
+        <Card className="mb-0"  style={{background:"#43120f", borderRadius:"30px"}}>
           <CardBody>
             <Link
               className="brand-logo"
               to="/"
               onClick={(e) => e.preventDefault()}
             >
-              <h2 className="brand-text text-primary ms-1">Demo App</h2>
+              <h2 className="brand-text text-primary ms-1">Sign Up</h2>
             </Link>
-            <CardTitle tag="h4" className="mb-1">
+            {/* <CardTitle tag="h4" className="mb-1">
               Adventure starts here 🚀
             </CardTitle>
             <CardText className="mb-2">
               Make your app management easy and fun!
-            </CardText>
+            </CardText> */}
             <Form
-              className="auth-register-form mt-4"
+              className="auth-register-form mt-2"
               onSubmit={handleSubmit(onSubmit)}
             >
               <div className="mb-1">
@@ -83,8 +89,33 @@ const RegisterBasic = () => {
                 />
               </div>
               <div className="mb-1">
+                <AppInput
+                  type="phone"
+                  label="Phone Number"
+                  control={control}
+                  value=""
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required={true}
+                />
+              </div>
+              <div className="mb-1">
                 <PasswordToggle
                   label="Password"
+                  control={control}
+                  name="password"
+                  id="password"
+                  // isClose={true}
+                  // hideIcon={true}
+                  showStandard={true}
+                  placeholder="*******"
+                  required={true}
+                />
+              </div>
+              <div className="mb-1">
+                <PasswordToggle
+                  label="Conform Password"
                   control={control}
                   name="password"
                   id="password"
@@ -123,7 +154,7 @@ const RegisterBasic = () => {
               </Button>
             </Form>
             <p className="text-center mt-2">
-              <span className="me-25">Already have an account?</span>
+              <span className="me-25 text-white">Already have an account?</span>
               <Link to="/login">
                 <span>Sign in instead</span>
               </Link>

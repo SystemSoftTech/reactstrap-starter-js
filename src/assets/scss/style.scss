@@ -2,3 +2,18 @@
 ------
 PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
 WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+.form-label{
+    color: white;
+}
+.form-check-label{
+    color: white;
+}
+.input-group-text{
+    color: black !important;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+    -webkit-text-fill-color: #000 !important;
+}
+.form-control{
+    color: black;
+}

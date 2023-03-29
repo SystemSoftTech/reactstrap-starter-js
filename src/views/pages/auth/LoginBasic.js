@@ -32,6 +32,8 @@ import AppAlert from "@components/Alerts"
 // ** React Toastify
 import Avatar from "@components/Avatar"
 
+// Images
+import templetop from "assets/images/pages/temple-top.svg"
 
 const ToastContent = ({ name, role }) => (
   <>
@@ -116,26 +118,31 @@ const LoginBasic = () => {
   }
 
   return (
-    <div className="auth-wrapper auth-basic px-2">
+    <div className="auth-wrapper auth-basic px-2" style={{background: "linear-gradient(180deg, #7D1717 0%, #F48037 100%)"}}>
+    {/* <h1>Logo</h1> */}
       <div className="auth-inner my-2">
-        <Card className="mb-0">
+        <div className="text-center">
+        <img src={templetop} width="80%" style={{position:"relative", bottom:"-1px"}} />
+        </div>
+     
+        <Card className="mb-0" style={{background:"#43120f", borderRadius:"30px"}}>
           <CardBody>
             <Link
               className="brand-logo"
               to="/"
               onClick={(e) => e.preventDefault()}
             >
-              <h2 className="brand-text text-primary ms-1">Demo App</h2>
+              <h2 className="brand-text text-white ms-1">Login</h2>
             </Link>
-            <CardTitle tag="h4" className="mb-1">
-              Welcome to Demo App! 👋
+            {/* <CardTitle tag="h4" className="text-white mb-1 text-center">
+              Welcome to HTFL Devotee Login 👋
             </CardTitle>
-            <CardText className="mb-2">
+            <CardText className="mb-2 text-white text-center">
               Please sign-in to your account and start the adventure
-            </CardText>
+            </CardText> */}
             {error && <AppAlert
               isOpen={isOpen}
-              color="danger"
+              // color="danger"
               timer={10000}
               toggle={setIsOpen}
             >
@@ -148,6 +155,7 @@ const LoginBasic = () => {
               <AppInput
                 type="email"
                 label="Email"
+                // color="#danger"
                 control={control}
                 value=""
                 id="email"
@@ -157,7 +165,7 @@ const LoginBasic = () => {
               />
               <div>
                 <div className="float-end">
-                  <Link to="/reset-password">
+                  <Link to="/forget-password">
                     <small>Forgot Password?</small>
                   </Link>
                 </div>
@@ -201,7 +209,7 @@ const LoginBasic = () => {
               </AppButton>
             </Form>
             <p className="text-center mt-2">
-              <span className="me-25">New on our platform?</span>
+              <span className="me-25 text-white">New on our platform?</span>
               <Link to="/register">
                 <span>Create an account</span>
               </Link>
