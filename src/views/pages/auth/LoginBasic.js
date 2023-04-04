@@ -26,6 +26,7 @@ import { loginValidations } from "./schemas/validations"
 
 // ** Actions
 import { AuthLogin } from "@store/actions/auth"
+import { postLogin } from "@store/actions/auth/loginAction"
 import AppButton from "@components/Buttons"
 import AppAlert from "@components/Alerts"
 
@@ -34,6 +35,8 @@ import Avatar from "@components/Avatar"
 
 // Images
 import templetop from "assets/images/pages/temple-top.svg"
+// Header
+import HTFLHeader from "../htflheaderlogo/index"
 
 const ToastContent = ({ name, role }) => (
   <>
@@ -118,6 +121,10 @@ const LoginBasic = () => {
   }
 
   return (
+    <>
+    <div className="header">
+        <HTFLHeader/>
+      </div>
     <div className="auth-wrapper auth-basic px-2" style={{background: "linear-gradient(180deg, #7D1717 0%, #F48037 100%)"}}>
     {/* <h1>Logo</h1> */}
       <div className="auth-inner my-2">
@@ -218,6 +225,7 @@ const LoginBasic = () => {
         </Card>
       </div>
     </div>
+    </>
   )
 }
 

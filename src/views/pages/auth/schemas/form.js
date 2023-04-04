@@ -29,36 +29,60 @@ export const loginForm = {
 export const registerForm = {
   formId: "register",
   formField: {
-    username: {
-      name: "username",
-      label: "Username",
-      type: "username",
-      placeholder: "Username",
-      errorMsg: "Username is required.",
-      invalidMsg: "Your username is invalid."
+    FirstName: {
+      name: "FirstName",
+      label: "FirstName",
+      type: "FirstName",
+      placeholder: "FirstName",
+      errorMsg: "FirstName is required.",
+      invalidMsg: "Your FirstName is invalid."
     },
-    email: {
-      name: "email",
-      label: "Email",
+    LastName: {
+      name: "LastName",
+      label: "LastName",
+      type: "LastName",
+      placeholder: "LastName",
+      errorMsg: "LastName is required.",
+      invalidMsg: "Your LastName is invalid."
+    },
+    EmailAddress: {
+      name: "EmailAddress",
+      label: "EmailAddress",
       type: "email",
-      placeholder: "Email",
-      errorMsg: "Email is required.",
-      invalidMsg: "Your email is invalid."
+      placeholder: "EmailAddress",
+      errorMsg: "EmailAddress is required.",
+      invalidMsg: "Your EmailAddress is invalid."
     },
-    password: {
-      name: "password",
+    Password: {
+      name: "Password",
       label: "Password",
       type: "password",
       placeholder: "********",
       errorMsg: "Password is required.",
       invalidMsg: "Your password must match standard."
     },
-    terms: {
-      name: "agree",
-      label: "Agree",
-      type: "checkbox",
-      errorMsg: "Privacy policy and terms required."
+    repeatPassword: {
+      name: "Password",
+      label: "Password",
+      type: "password",
+      placeholder: "********",
+      errorMsg: "Password is required.",
+      invalidMsg: "Your password must match standard."
+    },
+    PhoneNumber: {
+      name: "PhoneNumber",
+      label: "PhoneNumber",
+      type: "number",
+      placeholder: "PhoneNumber",
+      errorMsg: "Phone number is required.",
+      invalidMsg: "Your phone is invalid."
     }
+    // terms: {
+    //   name: "agree",
+    //   label: "Agree",
+    //   type: "checkbox",
+    //   errorMsg: "Privacy policy and terms required."
+    // }
   }
 }
 
@@ -80,6 +104,19 @@ export const resetPasswordForm = {
       placeholder: "********",
       errorMsg: "Confirm Password is required.",
       invalidMsg: "Your password must match standard."
+    }
+  }
+}
+export const forgotPasswordForm = {
+  formId: "forgot-password",
+  formField: {
+    EmailAddress: {
+      name: "EmailAddress",
+      label: "EmailAddress",
+      type: "email",
+      placeholder: "EmailAddress",
+      errorMsg: "EmailAddress is required.",
+      invalidMsg: "Your EmailAddress is invalid."
     }
   }
 }

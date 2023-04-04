@@ -15,7 +15,9 @@ import HTFLHeader from "../htflheaderlogo/index"
 // Images
 import templetop from "assets/images/pages/temple-top.svg"
 
-const VerifyEmailBasic = () => {
+
+const Emailsent = () => {
+
   return (
     <>
     <div className="header">
@@ -33,14 +35,13 @@ const VerifyEmailBasic = () => {
               to="/"
               onClick={(e) => e.preventDefault()}
             >
-              <h2 className="brand-text text-primary ms-1">Verify your email</h2>
+              <h2 className="brand-text text-primary ms-1">Email Sent</h2>
             </Link>
             {/* <CardTitle tag='h2' className='fw-bolder mb-1'>
               Verify your email ✉️
             </CardTitle> */}
             <CardText className='mb-2 text-center text-white'>
-              We've sent a link to your email address: <span className='fw-bolder'></span> Please
-              follow the link inside to continue.
+              We've sent a link to your Registered email address: <span className='fw-bolder'></span>with a link to reset your password.
             </CardText>
             <Button block tag={Link} to='/' color='primary'>
               Back to Home Page
@@ -63,4 +64,4 @@ const VerifyEmailBasic = () => {
   )
 }
 
-export default VerifyEmailBasic
+export default Emailsent

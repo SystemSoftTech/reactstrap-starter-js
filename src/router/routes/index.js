@@ -186,6 +186,14 @@ const Routes = [
     }
   },
   {
+    path: '/forgotemail-sent',
+    component: lazy(() => import('../../views/pages/auth/Emailsent')),
+    layout: 'BlankLayout',
+    meta: {
+      authRoute: true
+    }
+  },
+  {
     path: '/error',
     component: lazy(() => import('../../views/Error')),
     layout: 'BlankLayout'

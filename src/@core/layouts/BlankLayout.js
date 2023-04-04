@@ -7,6 +7,9 @@ import { useSkin } from '@hooks/useSkin'
 // ** Third Party Components
 import classnames from 'classnames'
 
+// Footer
+import Footer from './components/footer'
+
 const BlankLayout = ({ children }) => {
   // ** States
   const [isMounted, setIsMounted] = useState(false)
@@ -34,6 +37,7 @@ const BlankLayout = ({ children }) => {
           <div className='content-body'>{children}</div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

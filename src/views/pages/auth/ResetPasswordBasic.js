@@ -1,5 +1,7 @@
 // ** React Imports
-import { Link } from "react-router-dom"
+import { Link, useHistory, useLocation} from "react-router-dom"
+import { useEffect, useState } from "react"
+
 
 // ** Icons Imports
 import { ChevronLeft } from "react-feather"
@@ -10,6 +12,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 
 // ** Custom Components
 import PasswordToggle from "@components/PasswordToggle"
+import { request } from "@services/interceptors"
 
 // ** Reactstrap Imports
 import { Card, CardBody, CardTitle, CardText, Form, Button } from "reactstrap"
@@ -21,13 +24,55 @@ import { resetPasswordValidations } from "./schemas/validations"
 // Images
 import templetop from "assets/images/pages/temple-top.svg"
 
+
 const ResetPasswordBasic = () => {
+  // function useQuery() {
+  //   const { search } = useLocation()
+  //   return React.useMemo(() => new URLSearchParams(search), [search])
+  //   }
+
+  // useEffect(() => {
+  //   let query = useQuery()
+  //   console.log(query)
+
+  //  }, [])
+  // const history = useHistory()
+  // const [searchParams] = useSearchParams()
+  const { search } = useLocation()
+  const [email, setEmail] = useState("")
+  const [isSubmit, setIsSubmit] = useState(false)
+  const [open, setOpen] = useState(false)
+  const [isDanger, setIsDanger] = useState(false)
+  const [error, setError] = useState("")
+  const [timer, setTimer] = useState(7000)
+  const [loading, setLoading] = useState(false)
   // ** Hooks
   const { control, handleSubmit } = useForm({
     resolver: yupResolver(resetPasswordValidations[0])
   })
-  const onSubmit = (data) => {
-    console.log(data)
+  const onSubmit = (values) => {
+    setLoading(true)
+    let code = searchParams.get("code")
+    let email = searchParams.get("EmailId")
+    if (code && email) {
+      const payload = {
+        Email: email,
+        Code: code,
+        Password: values.password,
+        Username: email
+      }
+      request("Users/ChangePassword", "POST", payload)
+        .then(() => {
+          setLoading(false)
+          setEmail(email)
+          setOpen(false)
+        })
+        .catch((err) => {
+          setOpen(true)
+          setLoading(false)
+          setError(err)
+        })
+    }
   }
 
   return (

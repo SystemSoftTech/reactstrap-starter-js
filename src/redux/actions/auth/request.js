@@ -13,7 +13,7 @@ export const request = (
 ) => {
   const token = localStorage.getItem("authToken")
   const config = {
-    url: `${process.env.REACT_APP_API_BASE_URL}${url}`,
+    url: `${process.env.REACT_APP_AUTH_BASE_URL}${url}`,
     method: method,
     data: payload,
     withCredentials: true,

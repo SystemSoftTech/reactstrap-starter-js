@@ -1,7 +1,5 @@
 // ** React Imports
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from "react"
-import { fetchUserInformation } from '@store/actions/auth/users'
 
 // ** Reactstrap Imports
 import { Card, CardBody, CardTitle, CardText, Button } from 'reactstrap'
@@ -15,7 +13,8 @@ import HTFLHeader from "../htflheaderlogo/index"
 // Images
 import templetop from "assets/images/pages/temple-top.svg"
 
-const VerifyEmailBasic = () => {
+
+const ConformRegister = () => {
   return (
     <>
     <div className="header">
@@ -33,25 +32,22 @@ const VerifyEmailBasic = () => {
               to="/"
               onClick={(e) => e.preventDefault()}
             >
-              <h2 className="brand-text text-primary ms-1">Verify your email</h2>
+              <h2 className="brand-text text-primary ms-1">Congratulations!</h2>
             </Link>
             {/* <CardTitle tag='h2' className='fw-bolder mb-1'>
               Verify your email ✉️
             </CardTitle> */}
             <CardText className='mb-2 text-center text-white'>
-              We've sent a link to your email address: <span className='fw-bolder'></span> Please
-              follow the link inside to continue.
+            Your account has been successfully created. Please check your email and follow the instructions to verify your account. 
+             
             </CardText>
-            <Button block tag={Link} to='/' color='primary'>
-              Back to Home Page
-            </Button>
+            
 
-            {/* <p className="text-center mt-2">
-              <span className="me-25 text-white">Didn't receive an email?</span>
-              <Link to="/forget-password">
-                <span>Resend</span>
-              </Link>
-            </p> */}
+            <p className="text-center mt-2">
+              <span className="me-25 text-white">
+You will be redirected to a Home page in 5 seconds</span>
+              
+            </p>
 
             
           </CardBody>
@@ -63,4 +59,4 @@ const VerifyEmailBasic = () => {
   )
 }
 
-export default VerifyEmailBasic
+export default ConformRegister

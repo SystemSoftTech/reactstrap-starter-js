@@ -27,7 +27,7 @@ module.exports = {
 
     // Variable
     // 'init-declarations': 'error',
-    'no-use-before-define': 'error',
+    // 'no-use-before-define': 'error',
     // 'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z]' }],
 
     // Stylistic Issues
@@ -72,7 +72,7 @@ module.exports = {
     'no-var': 'error',
     // 'object-shorthand': 'error',
     // 'object-shorthand': 'consistent',
-    'prefer-const': 'error',
+    // 'prefer-const': 'error',
     'prefer-template': 'error'
   }
 
