@@ -1,4 +1,4 @@
-import { Home, Briefcase, Circle, Server, Layout, Grid, Upload, List, Table, Calendar } from 'react-feather'
+import { Home, Briefcase, Circle, Server, Layout, Grid, Upload, List, Table, Calendar, PieChart } from 'react-feather'
 
 export default [
   {
@@ -133,6 +133,31 @@ export default [
         title: 'React Hot Toasts',
         // icon: <Circle size={12} />,
         navLink: '/react-hot-toasts'
+      }
+    ]
+  },
+  {
+    id: 'apexchart',
+    title: 'Charts',
+    icon: <PieChart size={20} />,
+    children: [
+      {
+        id: 'apexchart',
+        title: 'ApexChart',
+        // icon: <Circle size={12} />,
+        navLink: '/apexchart'
+      },
+      {
+        id: 'chartjs',
+        title: 'ChartJs',
+        // icon: <Circle size={12} />,
+        navLink: '/chartjs'
+      },
+      {
+        id: 'rechart',
+        title: 'ReChart',
+        // icon: <Circle size={12} />,
+        navLink: '/rechart'
       }
     ]
   },

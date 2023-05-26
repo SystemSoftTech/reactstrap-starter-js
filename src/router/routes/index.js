@@ -126,6 +126,54 @@ const Routes = [
     component: lazy(() => import('../../views/pages/examples/Wizard'))
   },
   {
+    path: '/elements/input',
+    component: lazy(() => import('../../views/pages/examples/form-elements/input'))
+  },
+  {
+    path: '/elements/input-group',
+    component: lazy(() => import('../../views/pages/examples/form-elements/input-groups'))
+  },
+  {
+    path: '/elements/input-mask',
+    component: lazy(() => import('../../views/pages/examples/form-elements/input-mask'))
+  },
+  {
+    path: '/elements/textarea',
+    component: lazy(() => import('../../views/pages/examples/form-elements/textarea'))
+  },
+  {
+    path: '/elements/checkbox',
+    component: lazy(() => import('../../views/pages/examples/form-elements/checkboxes'))
+  },
+  {
+    path: '/elements/radio',
+    component: lazy(() => import('../../views/pages/examples/form-elements/radio'))
+  },
+  {
+    path: '/elements/switch',
+    component: lazy(() => import('../../views/pages/examples/form-elements/switch'))
+  },
+  {
+    path: '/elements/select',
+    component: lazy(() => import('../../views/pages/examples/form-elements/select'))
+  },
+  {
+    path: '/elements/number-input',
+    component: lazy(() => import('../../views/pages/examples/form-elements/number-input'))
+  },
+  {
+    path: '/elements/file-uploader',
+    component: lazy(() => import('../../views/pages/examples/form-elements/file-uploader'))
+  },
+  {
+    path: '/elements/editor',
+    component: lazy(() => import('../../views/pages/examples/form-elements/editor'))
+  },
+  {
+    path: '/elements/pickers',
+    component: lazy(() => import('../../views/pages/examples/form-elements/datepicker'))
+  },
+  {
     path: '/timeline',
     component: lazy(() => import('../../views/pages/examples/Timeline'))
   },
@@ -134,12 +182,20 @@ const Routes = [
     component: lazy(() => import('../../views/pages/examples/Dropdowns'))
   },
   {
-    path: '/file-uploader',
-    component: lazy(() => import('../../views/pages/examples/FileUploader'))
-  },
-  {
     path: '/calendar',
     component: lazy(() => import('../../views/pages/examples/Calendar'))
+  },
+  {
+    path: '/apexchart',
+    component: lazy(() => import('../../views/pages/examples/charts/Apex'))
+  },
+  {
+    path: '/rechart',
+    component: lazy(() => import('../../views/pages/examples/charts/Recharts'))
+  },
+  {
+    path: '/chartjs',
+    component: lazy(() => import('../../views/pages/examples/charts/ChartJs'))
   },
   {
     path: '/table/bootstrap-datatable',
