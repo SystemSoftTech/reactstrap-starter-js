@@ -10,7 +10,7 @@ git clone https://github.com/SystemSoftTech/reactstrap-starter-js.git
 After cloning, please install all the dependencies.
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 <br />
 
